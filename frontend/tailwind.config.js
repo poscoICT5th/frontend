@@ -4,4 +4,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cho
