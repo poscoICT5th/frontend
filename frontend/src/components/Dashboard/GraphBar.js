@@ -5,10 +5,10 @@ function GraphBar() {
     const donutData = {
         series: [{
             data: [{
-                x: '입고',
+                x: '매출',
                 y: 10
             }, {
-                x: '출고',
+                x: '손실',
                 y: 18
             },]
         }],
@@ -51,7 +51,7 @@ function GraphBar() {
                     }
                 }
             },
-            labels: ["입고", "출고"],
+            labels: ["매출", "손실"],
             title: {
                 text: 'Test',
                 align: 'center'
@@ -66,6 +66,7 @@ function GraphBar() {
                     series={donutData.series}
                     type="bar"
                     width={500}
+                    align="center"
                 />
             </div>
         </div>

@@ -58,6 +58,7 @@ function GraphDonut() {
                     series={donutData.series}
                     type="donut"
                     width={500}
+                    align="center"
                 />
             </div>
         </div>
