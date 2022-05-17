@@ -9,10 +9,14 @@ import { LockClosedIcon } from '@heroicons/react/solid'
 import { useNavigate } from 'react-router-dom'
 function Login() {
   let navigate = useNavigate();
+  function Login(params) {
+    // 로그인 axios
+    navigate('/Main');
+  }
   return (
     <div className="mt-40">
       {/* title */}
-      <div className="font-bold text-2xl">
+      <div className="font-bold text-2xl text-center">
         POSCO ICT - 5
       </div>
       {/*  */}
@@ -94,7 +98,7 @@ function Login() {
               <button
                 type="submit"
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                onClick={() => { navigate("/dashboard"); }}
+                onClick={() => { Login() }}
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
