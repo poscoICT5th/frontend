@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 
 function GraphDonut() {
     const donutData = {
-        series: [50, 43, 32, 19, 7],
+        series: [50, 92],
         options: {
             chart: {
                 type: 'donut',
@@ -30,8 +30,8 @@ function GraphDonut() {
                             total: {
                                 showAlways: true,
                                 show: true,
-                                label: 'Total',
-                                fontSize: '12px',
+                                label: '입출고현황',
+                                fontSize: '20px',
                                 color: 'red'
                             },
                             value: {
@@ -43,7 +43,7 @@ function GraphDonut() {
                     }
                 }
             },
-            labels: ["A", "B", "C", "D", "E"],
+            labels: ["입고", "출고"],
             title: {
                 text: 'Test',
                 align: 'center'
@@ -57,7 +57,7 @@ function GraphDonut() {
                     options={donutData.options}
                     series={donutData.series}
                     type="donut"
-                    width="500"
+                    width={500}
                 />
             </div>
         </div>
