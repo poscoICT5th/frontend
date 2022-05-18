@@ -4,6 +4,9 @@ import Login from './components/Account/Login'
 import MainDashboard from './components/Dashboard/MainDashboard'
 import Navbar from './components/Basic/Navbar'
 import Anzi from './components/List/anzi'
+import Map from './components/Map/Map'
+import Map1 from './components/Map/Map1'
+
 
 function App() {
   return (
@@ -13,6 +16,10 @@ function App() {
         <Route path="/" exact element={<Login />} />
         <Route path="/Main" element={<MainDashboard />} />
         <Route path="/anzi" element={<Anzi />} />
+        <Route path="/map" element={<Map />} />
+        <Route path="/map1" element={<Map1 />} />
+
+
       </Routes>
     </div>
   )
