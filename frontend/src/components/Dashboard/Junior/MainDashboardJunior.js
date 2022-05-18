@@ -1,7 +1,6 @@
 import React from 'react'
 import ListRequestStoredJunior from './ListRequestStoredJunior'
 import ListRequestTakenoutJunior from './ListRequestTakenoutJunior'
-import GraphBar from '../Common/GraphBar'
 import GraphBarStored from '../Common/GraphBarStored'
 import GraphBarWarehouse from '../Common/GraphBarWarehouse'
 import GraphDonutJunior from './GraphDonutJunior'
@@ -12,9 +11,6 @@ function MainDashboardJunior() {
     let navigate = useNavigate();
     function toListRequestStoredJunior(params) {
         navigate("/RequestProductListJunior")
-    }
-    function toRequestMoveListJunior(params) {
-        navigate("/RequestMoveListJunior")
     }
     return (
         <div className=''>
@@ -62,7 +58,7 @@ function MainDashboardJunior() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물품 창고이동 요청대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toRequestMoveListJunior() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toListRequestStoredJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestMoveJunior />

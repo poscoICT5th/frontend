@@ -12,9 +12,6 @@ function MainDashboardSenior() {
     function toRequestProductListSenior(params) {
         navigate("/RequestProductListSenior")
     }
-    function toRequestMoveListSenior(params) {
-        navigate("/RequestMoveListSenior")
-    }
     return (
         <div className=''>
             <div className="py-12 bg-white mx-16">
@@ -60,7 +57,7 @@ function MainDashboardSenior() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 창고이동 승인대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toRequestMoveListSenior() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListSenior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestedMoveSenior />
