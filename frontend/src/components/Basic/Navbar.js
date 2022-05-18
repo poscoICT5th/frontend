@@ -2,6 +2,7 @@
 import React, { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 
 const navigation = {
   categories: [
@@ -311,7 +312,7 @@ function Navbar() {
     <div className="bg-white">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
+        <Dialog as="div" className="relative z-40 lg:hidden bg-white" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -334,7 +335,7 @@ function Navbar() {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+              <Dialog.Panel className="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto ">
                 <div className="px-4 pt-5 pb-2 flex">
                   <button
                     type="button"
@@ -448,7 +449,6 @@ function Navbar() {
       </Transition.Root>
 
       <header className="relative bg-white">
-
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
             <div className="h-16 flex items-center">
@@ -463,14 +463,13 @@ function Navbar() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
+                <Link to="/Main">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                    src="https://www.posco.co.kr/docs/kor6/jsp/_images/02_corp/922_1.jpg"
                     alt=""
                   />
-                </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -502,7 +501,7 @@ function Navbar() {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute top-full inset-x-0 text-sm text-gray-500">
+                            <Popover.Panel className="absolute top-full inset-x-0 text-sm text-gray-500 z-40 bg-white">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
@@ -576,12 +575,9 @@ function Navbar() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
+                    Logout
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Create account
-                  </a>
                 </div>
               </div>
             </div>
