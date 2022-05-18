@@ -25,8 +25,9 @@ function Forms() {
         <TextField
           label="Size"
           id="standard-size-normal"
-          defaultValue="Normal"
+          // defaultValue="Normal"
           variant="standard"
+          placeholder='test'
         />
       </div>
     </Box>
