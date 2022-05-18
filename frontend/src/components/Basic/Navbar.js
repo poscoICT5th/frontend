@@ -463,7 +463,7 @@ function Navbar() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link to="/Main">
+                <Link to="/MainDashboardJunior">
                   <img
                     className="h-8 w-auto"
                     src="https://www.posco.co.kr/docs/kor6/jsp/_images/02_corp/922_1.jpg"

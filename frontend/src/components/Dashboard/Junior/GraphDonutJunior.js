@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactApexChart from "react-apexcharts";
 
-function GraphDonut() {
+function GraphDonutJunior() {
+    const [inputData, setinputData] = useState([])
+    const [labelData, setlabelData] = useState([])
+    const rows = [
+        { id: 1, productName: 'Snow', firstName: 'Jon', request: 35 },
+        { id: 2, productName: 'Lannister', firstName: 'Cersei', request: 42 },
+        { id: 3, productName: 'Lannister', firstName: 'Jaime', request: 45 },
+        { id: 4, productName: 'Stark', firstName: 'Arya', request: 16 },
+        { id: 5, productName: 'Targaryen', firstName: 'Daenerys', request: 23 },
+        { id: 6, productName: 'Melisandre', firstName: null, request: 52 },
+        { id: 7, productName: 'Clifford', firstName: 'Ferrara', request: 44 },
+        { id: 8, productName: 'Frances', firstName: 'Rossini', request: 36 },
+        { id: 9, productName: 'Roxie', firstName: 'Harvey', request: 65 },
+    ];
     const donutData = {
-        series: [50, 92],
+        series: [30, 27, 15],
         options: {
             chart: {
                 type: 'donut',
@@ -20,19 +33,19 @@ function GraphDonut() {
                         // hollow: {
                         // margin: 15,
                         // size: '70%',
-                        // image: '../../css/images/a-icon.jpg',
-                        // imageWidth: 64,
-                        // imageHeight: 64,
-                        // imageClipped: false
+                        // imrequest: '../../css/imrequests/a-icon.jpg',
+                        // imrequestWidth: 64,
+                        // imrequestHeight: 64,
+                        // imrequestClipped: false
                         // },
                         labels: {
                             show: true,
                             total: {
                                 showAlways: true,
                                 show: true,
-                                label: '입출고현황',
-                                fontSize: '20px',
-                                color: 'red'
+                                label: '물품 요청 현황',
+                                fontSize: '15px',
+                                color: 'black'
                             },
                             value: {
                                 fontSize: '22px',
@@ -43,9 +56,9 @@ function GraphDonut() {
                     }
                 }
             },
-            labels: ["입고", "출고"],
+            labels: ["입고", "출고", "이동"],
             title: {
-                text: 'Test',
+                text: '입고, 출고, 이동에 관한 물품 요청 현황',
                 align: 'center'
             },
         },
@@ -65,4 +78,4 @@ function GraphDonut() {
     )
 }
 
-export default GraphDonut
+export default GraphDonutJunior

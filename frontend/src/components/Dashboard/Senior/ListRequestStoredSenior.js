@@ -1,7 +1,7 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 
-function ListRequestJunior() {
+function ListRequestStoredSenior() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'firstName', headerName: 'First name', width: 130 },
@@ -49,4 +49,4 @@ function ListRequestJunior() {
   )
 }
 
-export default ListRequestJunior
+export default ListRequestStoredSenior

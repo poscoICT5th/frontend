@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactApexChart from "react-apexcharts";
 
-function GraphBar() {
+function GraphDonutSenior() {
+    const [inputData, setinputData] = useState([])
+    const [labelData, setlabelData] = useState([])
+    const rows = [
+        { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+        { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+        { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+        { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+        { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: 23 },
+        { id: 6, lastName: 'Melisandre', firstName: null, age: 52 },
+        { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+        { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+        { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+    ];
     const donutData = {
-        series: [{
-            data: [{
-                x: '매출',
-                y: 10
-            }, {
-                x: '손실',
-                y: 18
-            },]
-        }],
+        series: [50, 92, 87],
         options: {
             chart: {
-                type: 'bar',
+                type: 'donut',
             },
             legend: {
                 position: 'bottom'
             },
             responsive: [{
-                // breakpoint: 480,
+                breakpoint: 480,
             }],
             plotOptions: {
                 pie: {
@@ -38,9 +43,9 @@ function GraphBar() {
                             total: {
                                 showAlways: true,
                                 show: true,
-                                label: '입출고현황',
-                                fontSize: '20px',
-                                color: 'red'
+                                label: '물품 요청 승인대기 현황',
+                                fontSize: '15px',
+                                color: 'black'
                             },
                             value: {
                                 fontSize: '22px',
@@ -51,7 +56,7 @@ function GraphBar() {
                     }
                 }
             },
-            labels: ["매출", "손실"],
+            labels: ["입고", "출고", "이동"],
             title: {
                 text: 'Test',
                 align: 'center'
@@ -64,7 +69,7 @@ function GraphBar() {
                 <ReactApexChart
                     options={donutData.options}
                     series={donutData.series}
-                    type="bar"
+                    type="donut"
                     width={500}
                     align="center"
                 />
@@ -73,4 +78,4 @@ function GraphBar() {
     )
 }
 
-export default GraphBar
+export default GraphDonutSenior
