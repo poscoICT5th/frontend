@@ -466,7 +466,7 @@ function Navbar() {
                 <Link to="/MainDashboardJunior">
                   <img
                     className="h-8 w-auto"
-                    src="https://www.posco.co.kr/docs/kor6/jsp/_images/02_corp/922_1.jpg"
+                    src="https://www.poscoict.com/images/kor5/common/h1_posco.png"
                     alt=""
                   />
                 </Link>

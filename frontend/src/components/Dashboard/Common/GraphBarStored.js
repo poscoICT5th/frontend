@@ -83,7 +83,7 @@ function GraphBarStored() {
                     options={barData.options}
                     series={barData.series}
                     type="bar"
-                    width={500}
+                    width="100%"
                     align="center"
                 />
             </div>

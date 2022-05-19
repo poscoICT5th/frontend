@@ -70,7 +70,7 @@ function GraphDonutSenior() {
                     options={donutData.options}
                     series={donutData.series}
                     type="donut"
-                    width={500}
+                    width="100%"
                     align="center"
                 />
             </div>

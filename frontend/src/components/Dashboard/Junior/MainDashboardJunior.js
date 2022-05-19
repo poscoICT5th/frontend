@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 function MainDashboardJunior() {
     let navigate = useNavigate();
-    function toListRequestStoredJunior(params) {
+    function toRequestProductListJunior(params) {
         navigate("/RequestProductListJunior")
     }
     return (
@@ -25,8 +25,7 @@ function MainDashboardJunior() {
                     <div className='grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 입고 요청 현황</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toListRequestStoredJunior() }}>전체보기</p>
-
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestStoredJunior />
@@ -34,6 +33,8 @@ function MainDashboardJunior() {
                             </dl>
                         </div>
                         <div className="mt-10">
+                            <p className='text-xl text-center font-bold mb-3'>물류 요청 현황</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <GraphDonutJunior />
@@ -42,7 +43,7 @@ function MainDashboardJunior() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>최근 출고 요청 현황</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toListRequestStoredJunior() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestTakenoutJunior />
@@ -50,6 +51,8 @@ function MainDashboardJunior() {
                             </dl>
                         </div>
                         <div className="mt-10">
+                            <p className='text-xl text-center font-bold mb-3'>창고 현황</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <GraphBarStored />
@@ -58,7 +61,7 @@ function MainDashboardJunior() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물품 창고이동 요청대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toListRequestStoredJunior() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestMoveJunior />
@@ -66,6 +69,8 @@ function MainDashboardJunior() {
                             </dl>
                         </div>
                         <div className="mt-10">
+                            <p className='text-xl text-center font-bold mb-3'>재고 현황</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toRequestProductListJunior() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <GraphBarWarehouse />

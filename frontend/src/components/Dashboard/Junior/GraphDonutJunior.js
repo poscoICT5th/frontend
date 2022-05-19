@@ -65,15 +65,13 @@ function GraphDonutJunior() {
     }
     return (
         <div>
-            <div id="chart">
-                <ReactApexChart
-                    options={donutData.options}
-                    series={donutData.series}
-                    type="donut"
-                    width={500}
-                    align="center"
-                />
-            </div>
+            <ReactApexChart
+                options={donutData.options}
+                series={donutData.series}
+                type="donut"
+                width="100%"
+                align="center"
+            />
         </div>
     )
 }
