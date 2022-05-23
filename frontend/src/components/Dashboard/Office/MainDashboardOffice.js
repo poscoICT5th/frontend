@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 function MainDashboardOffice() {
     let navigate = useNavigate();
     function toProductList(params) {
-        navigate("/ProductList")
+        navigate("/RequestProductListOffice")
     }
     return (
         <div className=''>
@@ -29,13 +29,6 @@ function MainDashboardOffice() {
                                 </div>
                             </dl>
                         </div>
-                        {/* <div className="mt-10">
-                            <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
-                                <div className="relative">
-                                    <GraphDonutOffice />
-                                </div>
-                            </dl>
-                        </div> */}
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 출고 승인대기</p>
                             <p className='text-md text-center mb-3' onClick={() => { toProductList() }}>전체보기</p>
@@ -45,13 +38,6 @@ function MainDashboardOffice() {
                                 </div>
                             </dl>
                         </div>
-                        {/* <div className="mt-10">
-                            <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
-                                <div className="relative">
-                                    <GraphBarStored />
-                                </div>
-                            </dl>
-                        </div> */}
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 창고이동 승인대기</p>
                             <p className='text-md text-center mb-3' onClick={() => { toProductList() }}>전체보기</p>
@@ -70,13 +56,6 @@ function MainDashboardOffice() {
                                 </div>
                             </dl>
                         </div>
-                        {/* <div className="mt-10">
-                            <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
-                                <div className="relative">
-                                    <GraphBarWarehouse />
-                                </div>
-                            </dl>
-                        </div> */}
                     </div>
                 </div>
             </div>
