@@ -1,6 +1,6 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom'
-import Login from './components/Account/Login'
+import { Route, Routes } from "react-router-dom";
+import Login from "./components/Account/Login";
 import MainDashboardJunior from "./components/Dashboard/Junior(X)/MainDashboardJunior";
 import MainDashboardOffice from "./components/Dashboard/Office/MainDashboardOffice";
 import WarehouseList from "./components/List/Common/WarehouseList";
@@ -12,7 +12,7 @@ import PreparingPage from "./components/Basic/PreparingPage";
 import Sidebar1 from "./components/Basic/Sidebar1";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-const { Header, Footer, Sider, Content } = Layout;
+const { Footer, Sider, Content } = Layout;
 function App() {
   return (
     <div>
