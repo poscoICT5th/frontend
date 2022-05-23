@@ -20,39 +20,6 @@ function App() {
     <div className="">
       <div className="">
         <Layout>
-<<<<<<< HEAD
-          <Content>
-            <Routes>
-              <Route path="/" exact element={<Login />} />
-              <Route path="/WarehouseList" exact element={<WarehouseList />} />
-              <Route path="/StockList" exact element={<StockList />} />
-              <Route
-                path="/productdetail/:lot"
-                exact
-                element={<ProductDetail />}
-              />
-              <Route path="/ProductList" element={<ProductList />} />
-              <Route path="/PreparingPage" exact element={<PreparingPage />} />
-              {/* Junior */}
-              <Route
-                path="/MainDashboardJunior"
-                element={<MainDashboardJunior />}
-              />
-              {/* Office */}
-              <Route
-                path="/MainDashboardOffice"
-                element={<MainDashboardOffice />}
-              />
-              <Route
-                path="/RequestProductListOffice"
-                element={<RequestProductListOffice />}
-              />
-              {/* anzi */}
-              <Route path="/map1" element={<Map1 />} />
-            </Routes>
-          </Content>
-          <Footer>Footer</Footer>
-=======
           <Sider style={{ height: "100vh", background: "white" }}>
             <Sidebar />
           </Sider>
@@ -98,7 +65,6 @@ function App() {
             </Content>
             <Footer>Footer</Footer>
           </Layout>
->>>>>>> bc747fe3ab8e4e1a935c10ace3ec320dabdfe725
         </Layout>
       </div>
     </div>

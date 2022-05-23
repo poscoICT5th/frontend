@@ -19,6 +19,7 @@ const initialPanes = [
   },
   {
     title: 'Tab 3',
+
     content: <StockList />,
     key: '3',
   },
