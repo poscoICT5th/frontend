@@ -16,6 +16,7 @@ import RequestProductListOffice from "./components/List/Office/RequestProductLis
 import Tab from "./components/Tab";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import Request from "./components/Request/Request";
 const { Footer, Sider, Content } = Layout;
 function App() {
   useEffect(() => {
@@ -61,19 +62,19 @@ function App() {
                   exact
                   element={<RequestProductListOffice />}
                 />
+                <Route path="/Request" exact element={<Request />} />
                 {/* 사무실 메인대시보드 */}
                 <Route
                   path="/MainDashboardOffice"
                   element={<MainDashboardOffice />}
                 />
-                <Route
-                  path="/Tab"
-                  element={<Tab />}
-                />
+                <Route path="/Tab" element={<Tab />} />
                 {/* anzi */}
                 <Route path="/map1" element={<Map1 />} />
               </Routes>
-              <Footer style={{ height: "", background: "white" }}>Footer</Footer>
+              <Footer style={{ height: "", background: "white" }}>
+                Footer
+              </Footer>
             </Content>
           </Layout>
         </Layout>

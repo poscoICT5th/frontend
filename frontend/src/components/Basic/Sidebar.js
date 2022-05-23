@@ -16,32 +16,45 @@ function Sidebar() {
   }
   const items11 = [
     getItem("User", "1", <UserOutlined />, [
-      getItem("회원정보", "Profile"),
+      getItem("회원정보", "1"),
       getItem("회원탈퇴", "2"),
     ]),
-    getItem("물류", "2", <UserOutlined />, [
-      getItem("입고", "List"),
-      getItem("출고", "4"),
-      getItem("이동", "5"),
-    ]),
 
-    getItem("창고", "3", <UserOutlined />, [
-      getItem("창고 위치", "6"),
-      getItem("출고", "7"),
-      getItem("이동", "8"),
+    getItem("물류", "2", <UserOutlined />, [
+      getItem("입고관리", "Profile", <UserOutlined />, [
+        getItem("현재고 조회", "3"),
+        getItem("창고내 LOT 분리", "4"),
+        getItem("창고이동 승인확인", "5"),
+        getItem("기타 입,출고 등록", "6"),
+      ]),
+      getItem("이송관리", "3", <UserOutlined />, [
+        getItem("이송 요청 처리", "7"),
+        getItem("이송 실적 등록", "8"),
+        getItem("이송 입고 확정", "9"),
+      ]),
+      getItem("출고관리", "4", <UserOutlined />, [
+        getItem("출하요청내역", "10"),
+        getItem("출하확정", "11"),
+        getItem("매출마감", "12"),
+      ]),
     ]),
-    getItem("재고", "4", <UserOutlined />, [
-      getItem("조회", "9"),
-      getItem("재고MAP", "10"),
-      getItem("창고별 재고", "11"),
+    getItem("창고", "5", <UserOutlined />, [
+      getItem("창고 위치", "13"),
+      getItem("출고", "14"),
+      getItem("이동", "15"),
     ]),
-    getItem("Trend", "5", <UserOutlined />, [
-      getItem("재고예측", "12"),
-      getItem("수요예측", "13"),
+    getItem("재고", "6", <UserOutlined />, [
+      getItem("조회", "16"),
+      getItem("재고MAP", "17"),
+      getItem("창고별 재고", "18"),
     ]),
-    getItem("Files", "6", <UserOutlined />, [
-      getItem("재고예측", "16"),
-      getItem("수요예측", "17"),
+    getItem("Trend", "7", <UserOutlined />, [
+      getItem("재고예측", "19"),
+      getItem("수요예측", "20"),
+    ]),
+    getItem("Files", "8", <UserOutlined />, [
+      getItem("재고예측", "21"),
+      getItem("수요예측", "22"),
     ]),
   ];
 
