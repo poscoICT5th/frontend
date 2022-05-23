@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Button, Tabs } from 'antd';
 import MainDashboardOffice from './Dashboard/Office/MainDashboardOffice';
 import List from './List/List';
@@ -10,18 +10,21 @@ const defaultPanes = Array.from({
 }).map((_, index) => {
     const id = String(index + 1);
     return {
-        title: "New Tab",
+        title: "Main Dashboard",
         content: <MainDashboardOffice />,
         key: id,
     };
 });
 
 function Tab() {
-    // let str = useSelector((state) => { return state })
-    // console.log(str);
+    let data = useSelector((state) => { return state })
+    console.log(data)
     const [activeKey, setActiveKey] = useState(defaultPanes[0].key);
     const [panes, setPanes] = useState(defaultPanes);
     const newTabIndex = useRef(0);
+    useEffect(() => {
+
+    }, [])
 
     const onChange = (key) => {
         setActiveKey(key);
@@ -31,7 +34,7 @@ function Tab() {
         setPanes([
             ...panes,
             {
-                title: 'New Tab',
+                title: data.tabTitle,
                 content: <List />,
                 key: newActiveKey,
             },

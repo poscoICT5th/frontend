@@ -11,26 +11,29 @@ let user = createSlice({
   }
 })
 export let { changeName } = user.actions
+
 let tabTitle = createSlice({
   name: 'tabTitle',
-  initialState: 'Tab',
+  initialState: '',
   reducers: {
     handleTabTitle(state) {
-      return 'john ' + state
+      return state
     }
   }
 })
-export let { handleTabTitle } = user.actions
+export let { handleTabTitle } = tabTitle.actions
+
 let tabComponent = createSlice({
   name: 'tabComponent',
-  initialState: 'Login',
+  initialState: '',
   reducers: {
     handleTabComponent(state) {
-      return 'john ' + state
+      return state
     }
   }
 })
-export let { handleTabComponent } = user.actions
+export let { handleTabComponent } = tabComponent.actions
+
 // state등록해주는부분
 export default configureStore({
   // {작명:createSlice만든거.reducer} 사용

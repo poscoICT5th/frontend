@@ -2,8 +2,9 @@ import { UserOutlined } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const { Header, Content, Footer, Sider } = Layout;
+import { useDispatch, useSelector } from "react-redux"
+import { handleTabTitle, handleTabComponent } from "../../store.js"
+const { Sider } = Layout;
 function Sidebar() {
   let navigate = useNavigate();
   function getItem(label, key, icon, children) {
@@ -22,8 +23,8 @@ function Sidebar() {
 
     getItem("물류", "2", <UserOutlined />, [
       getItem("입고관리", "Profile", <UserOutlined />, [
-        getItem("현재고 조회", "3"),
-        getItem("창고내 LOT 분리", "4"),
+        getItem("현재고 조회", "List"),
+        getItem("창고내 LOT 분리", "List1"),
         getItem("창고이동 승인확인", "5"),
         getItem("기타 입,출고 등록", "6"),
       ]),
@@ -57,7 +58,7 @@ function Sidebar() {
       getItem("수요예측", "22"),
     ]),
   ];
-
+  const dispatch = useDispatch();
   return (
     <div>
       <Sider className="site-layout-background" width={200}>
@@ -71,7 +72,9 @@ function Sidebar() {
           items={items11}
           onClick={(e) => {
             console.log(e.key);
-            navigate(`/${e.key}`);
+            // navigate(`/${e.key}`);
+            dispatch(handleTabTitle(e.key))
+            dispatch(handleTabComponent(e.key))
           }}
         />
       </Sider>
