@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Account/Login";
-import MainDashboardJunior from "./components/Dashboard/Junior(X)/MainDashboardJunior";
 import MainDashboardOffice from "./components/Dashboard/Office/MainDashboardOffice";
 import WarehouseList from "./components/List/Common/WarehouseList";
 import StockList from "./components/List/Common/StockList";
@@ -26,35 +25,37 @@ function App() {
           <Layout>
             <Content style={{ height: "100vh", background: "white" }}>
               <Routes>
+                {/* 로그인 */}
                 <Route path="/" exact element={<Login />} />
+                {/* 물품리스트 */}
+                <Route path="/ProductList/:title" element={<ProductList />} />
+                {/* 창고 관리 */}
                 <Route
                   path="/WarehouseList"
                   exact
                   element={<WarehouseList />}
                 />
+                {/* 재고 관리 */}
                 <Route path="/StockList" exact element={<StockList />} />
+                {/* 재고 상세 + 로트번호 */}
                 <Route
                   path="/productdetail/:lot"
                   exact
                   element={<ProductDetail />}
                 />
-                <Route path="/ProductList" element={<ProductList />} />
+                {/* 준비중 */}
                 <Route
                   path="/PreparingPage"
                   exact
                   element={<PreparingPage />}
                 />
+                {/* 사무실에서 현장직으로 입고예정 처리요청 */}
                 <Route
                   path="/RequestProductListOffice"
                   exact
                   element={<RequestProductListOffice />}
                 />
-                {/* Junior */}
-                <Route
-                  path="/MainDashboardJunior"
-                  element={<MainDashboardJunior />}
-                />
-                {/* Office */}
+                {/* 사무실 메인대시보드 */}
                 <Route
                   path="/MainDashboardOffice"
                   element={<MainDashboardOffice />}
@@ -62,8 +63,8 @@ function App() {
                 {/* anzi */}
                 <Route path="/map1" element={<Map1 />} />
               </Routes>
+              <Footer style={{ height: "", background: "white" }}>Footer</Footer>
             </Content>
-            <Footer>Footer</Footer>
           </Layout>
         </Layout>
       </div>
