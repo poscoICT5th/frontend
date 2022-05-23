@@ -1,13 +1,18 @@
-import { PaperClipIcon } from "@heroicons/react/outline";
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
 
 function Request() {
-  // part 이름 가져오기
-  const [first, setfirst] = useState();
+  const [name, setName] = useState("");
+  const [lnum, setLnum] = useState(0);
+  const [pnum, setPnum] = useState(0);
+  const [price, setPrice] = useState(0);
+  const [memo, setMemo] = useState("");
 
-  //함수랑 버튼이랑 바인딩
-  //   엑시오스로 보낸다.
+  function onIncrease(params) {
+    //엑시오스
+    }
+    function onBack() {
+     
+    }
 
   return (
     <div className="flex justify-center">
@@ -32,6 +37,9 @@ function Request() {
                   id="first-name"
                   autoComplete="given-name"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
                 />
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -45,7 +53,10 @@ function Request() {
                   id="first-name"
                   autoComplete="given-name"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                />
+                  onChange={(e) => {
+                    setLnum(e.target.value);
+                  }}
+                    />
               </div>
 
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -58,7 +69,10 @@ function Request() {
                   id="first-name"
                   autoComplete="given-name"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                />
+                  onChange={(e) => {
+                    setPnum(e.target.value);
+                  }}
+                              />
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
@@ -71,7 +85,10 @@ function Request() {
                   id="first-name"
                   autoComplete="given-name"
                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                />
+                  onChange={(e) => {
+                    setPrice(e.target.value);
+                  }}
+                              />
               </div>
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">About</dt>
@@ -83,11 +100,30 @@ function Request() {
                   className="Larger shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   placeholder="about product"
                   defaultValue={""}
+                  onChange={(e) => {
+                    setMemo(e.target.value);
+                  }}      
                 />
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"></dd>
               </div>
+
+              <button
+                type="button"
+                className="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                onClick={onIncrease}
+              >
+                Submit
+              </button>
+
+              <button
+                type="button"
+                className="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                onClick={onBack}
+                          >
+                Back
+              </button>
             </dl>
           </div>
         </div>
