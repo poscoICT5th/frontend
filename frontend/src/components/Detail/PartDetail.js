@@ -42,7 +42,7 @@ function Detail() {
                     id="country"
                     name="country"
                     autoComplete="country-name"
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                   >
                     <option>전체보기</option>
                     <option>포항</option>
@@ -58,7 +58,7 @@ function Detail() {
                     id="country"
                     name="country"
                     autoComplete="country-name"
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                   >
                     <option>전체보기</option>
                     <option>Storage1</option>
@@ -74,7 +74,7 @@ function Detail() {
                     id="country"
                     name="country"
                     autoComplete="country-name"
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                   >
                     <option>전체보기</option>
                     <option>Product1</option>
@@ -97,7 +97,7 @@ function Detail() {
                         id="comments"
                         name="comments"
                         type="checkbox"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                       />
                     </div>
                     <div className="ml-3 text-sm">
@@ -113,7 +113,7 @@ function Detail() {
                         id="candidates"
                         name="candidates"
                         type="checkbox"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                       />
                     </div>
                     <div className="ml-3 text-sm">
@@ -129,7 +129,7 @@ function Detail() {
                         id="offers"
                         name="offers"
                         type="checkbox"
-                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                       />
                     </div>
                     <div className="ml-3 text-sm">
@@ -152,7 +152,7 @@ function Detail() {
                       id="push-everything"
                       name="push-notifications"
                       type="radio"
-                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                      className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                     />
                     <label htmlFor="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                       Everything
@@ -163,7 +163,7 @@ function Detail() {
                       id="push-email"
                       name="push-notifications"
                       type="radio"
-                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                      className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                     />
                     <label htmlFor="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                       Same as email
@@ -174,7 +174,7 @@ function Detail() {
                       id="push-nothing"
                       name="push-notifications"
                       type="radio"
-                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                      className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                     />
                     <label htmlFor="push-nothing" className="ml-3 block text-sm font-medium text-gray-700">
                       No push notifications
@@ -194,7 +194,7 @@ function Detail() {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
                 <div>
@@ -206,7 +206,7 @@ function Detail() {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
                 <div>
@@ -218,7 +218,7 @@ function Detail() {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
               </div>
@@ -228,7 +228,7 @@ function Detail() {
             <div className="px-4 py-3 text-right sm:px-6">
               <button
                 type="submit"
-                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
               >
                 Save
               </button>

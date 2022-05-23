@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function RequestProductListJunior() {
+function ProductList() {
     let navigate = useNavigate();
     // List 가져오기
     const [List, setList] = useState([
@@ -40,7 +40,7 @@ function RequestProductListJunior() {
                                 id="country"
                                 name="country"
                                 autoComplete="country-name"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                             >
                                 <option>전체보기</option>
                                 <option>포항</option>
@@ -56,7 +56,7 @@ function RequestProductListJunior() {
                                 id="country"
                                 name="country"
                                 autoComplete="country-name"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                             >
                                 <option>전체보기</option>
                                 <option>Storage1</option>
@@ -72,7 +72,7 @@ function RequestProductListJunior() {
                                 id="country"
                                 name="country"
                                 autoComplete="country-name"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                             >
                                 <option>전체보기</option>
                                 <option>Product1</option>
@@ -84,20 +84,16 @@ function RequestProductListJunior() {
                     {/*  */}
                     {/* checkBox */}
                     <fieldset>
-                        <legend className="sr-only">By Email</legend>
-                        <div className="text-base font-medium text-gray-900" aria-hidden="true">
-                            By Email
-                        </div>
                         <div className="mt-4 space-y-4">
                             <div className="">
                                 <label htmlFor="country" className="block text-sm font-medium text-gray-700">
-                                    Product
+                                    Product Status
                                 </label>
                                 <select
                                     id="country"
                                     name="country"
                                     autoComplete="country-name"
-                                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                                 >
                                     <option>전체보기</option>
                                     <option>입고</option>
@@ -111,12 +107,12 @@ function RequestProductListJunior() {
                                         id="candidates"
                                         name="candidates"
                                         type="checkbox"
-                                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                                     />
                                 </div>
                                 <div className="ml-3 text-sm">
                                     <label htmlFor="candidates" className="font-medium text-gray-700">
-                                        Candidates
+                                        대기중
                                     </label>
                                     <p className="text-gray-500">Get notified when a candidate applies for a job.</p>
                                 </div>
@@ -127,12 +123,12 @@ function RequestProductListJunior() {
                                         id="offers"
                                         name="offers"
                                         type="checkbox"
-                                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                                     />
                                 </div>
                                 <div className="ml-3 text-sm">
                                     <label htmlFor="offers" className="font-medium text-gray-700">
-                                        Offers
+                                        처리완료
                                     </label>
                                     <p className="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
                                 </div>
@@ -150,7 +146,7 @@ function RequestProductListJunior() {
                                     id="push-everything"
                                     name="push-notifications"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                                 />
                                 <label htmlFor="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Everything
@@ -161,7 +157,7 @@ function RequestProductListJunior() {
                                     id="push-email"
                                     name="push-notifications"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                                 />
                                 <label htmlFor="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     Same as email
@@ -172,7 +168,7 @@ function RequestProductListJunior() {
                                     id="push-nothing"
                                     name="push-notifications"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                                 />
                                 <label htmlFor="push-nothing" className="ml-3 block text-sm font-medium text-gray-700">
                                     No push notifications
@@ -192,8 +188,39 @@ function RequestProductListJunior() {
                                 name="first-name"
                                 id="first-name"
                                 autoComplete="given-name"
-                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
+                        </div>
+                        <div>
+                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                Product Size
+                            </label>
+                            <div className="grid grid-cols-3 text-center">
+                                <div>
+                                    <input
+                                        type="number"
+                                        name="first-name"
+                                        id="first-name"
+                                        autoComplete="given-name"
+                                        className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        placeholder="최소값"
+                                        min={0}
+                                    />
+                                </div>
+                                <div>~</div>
+                                <div>
+                                    <input
+                                        type="number"
+                                        name="first-name"
+                                        id="first-name"
+                                        autoComplete="given-name"
+                                        className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        placeholder="최대값"
+                                        min={5000}
+                                    />
+                                </div>
+
+                            </div>
                         </div>
                         <div>
                             <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
@@ -204,7 +231,7 @@ function RequestProductListJunior() {
                                 name="first-name"
                                 id="first-name"
                                 autoComplete="given-name"
-                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
                         </div>
                         <div>
@@ -216,9 +243,10 @@ function RequestProductListJunior() {
                                 name="first-name"
                                 id="first-name"
                                 autoComplete="given-name"
-                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
                         </div>
+
                     </div>
                     {/*  */}
                 </div>
@@ -226,7 +254,7 @@ function RequestProductListJunior() {
                 <div className="px-4 py-3 text-right sm:px-6">
                     <button
                         type="submit"
-                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
                     >
                         Save
                     </button>
@@ -299,4 +327,4 @@ function RequestProductListJunior() {
     )
 }
 
-export default RequestProductListJunior
+export default ProductList

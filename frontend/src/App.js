@@ -2,15 +2,14 @@ import React from "react";
 import { Route, Routes } from 'react-router-dom'
 import Login from './components/Account/Login'
 import Navbar from './components/Basic/Navbar'
-import MainDashboardJunior from "./components/Dashboard/Junior/MainDashboardJunior";
-import MainDashboardSenior from "./components/Dashboard/Senior/MainDashboardSenior";
+import MainDashboardJunior from "./components/Dashboard/Junior(X)/MainDashboardJunior";
+import MainDashboardOffice from "./components/Dashboard/Office/MainDashboardOffice";
 import WarehouseList from "./components/List/Common/WarehouseList";
 import StockList from "./components/List/Common/StockList";
-import RequestProductListJunior from "./components/List/Junior/RequestProductListJunior";
-import RequestProductListSenior from "./components/List/Senior/RequestProductListSenior";
+import ProductList from "./components/List/Common/ProductList";
 import ProductDetail from "./components/Detail/ProductDetail";
 import Map1 from './components/Map/Map1'
-
+import PreparingPage from "./components/Basic/PreparingPage";
 
 function App() {
   return (
@@ -21,15 +20,14 @@ function App() {
         <Route path="/WarehouseList" exact element={<WarehouseList />} />
         <Route path="/StockList" exact element={<StockList />} />
         <Route path="/productdetail/:lot" exact element={<ProductDetail />} />
+        <Route path="/ProductList" element={<ProductList />} />
+        <Route path="/PreparingPage" exact element={<PreparingPage />} />
         {/* Junior */}
         <Route path="/MainDashboardJunior" element={<MainDashboardJunior />} />
-        <Route path="/RequestProductListJunior" element={<RequestProductListJunior />} />
-        {/* Senior */}
-        <Route path="/MainDashboardSenior" element={<MainDashboardSenior />} />
-        <Route path="/RequestProductListSenior" element={<RequestProductListSenior />} />
+        {/* Office */}
+        <Route path="/MainDashboardOffice" element={<MainDashboardOffice />} />
+        {/* anzi */}
         <Route path="/map1" element={<Map1 />} />
-
-
       </Routes>
     </div>
   )

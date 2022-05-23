@@ -26,10 +26,10 @@ function Map1() {
       data: [{ x: 1, y: 10 }], // x:
     },
     {
-      
-        name: "B",
-        data: generateData(18, {min: 0,max: 90,}),
-      },
+
+      name: "B",
+      data: generateData(18, { min: 0, max: 90, }),
+    },
     {
       name: "C",
       data: generateData(18, {

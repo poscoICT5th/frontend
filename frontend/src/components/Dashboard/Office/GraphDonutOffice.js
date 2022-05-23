@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactApexChart from "react-apexcharts";
 
-function GraphDonutSenior() {
+function GraphDonutOffice() {
     const [inputData, setinputData] = useState([])
     const [labelData, setlabelData] = useState([])
     const rows = [
@@ -78,4 +78,4 @@ function GraphDonutSenior() {
     )
 }
 
-export default GraphDonutSenior
+export default GraphDonutOffice

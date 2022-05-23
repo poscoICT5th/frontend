@@ -1,16 +1,18 @@
+import { Button } from '@mui/material';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Barcode from '../../Functions/Barcode';
 
 function StockList() {
     let navigate = useNavigate();
     // List 가져오기
     const [List, setList] = useState([
-        { name: 'product1', lot: 1, productNo: 1213124234, storage: "storage1", status: "imported" },
-        { name: 'product2', lot: 2, productNo: 2312313422, storage: "storage1", status: "imported" },
-        { name: 'product3', lot: 3, productNo: 6345342423, storage: "storage1", status: "imported" },
-        { name: 'product4', lot: 4, productNo: 7234235234, storage: "storage1", status: "imported" },
-        { name: 'product5', lot: 5, productNo: 1236234754, storage: "storage1", status: "imported" },
-        { name: 'product6', lot: 6, productNo: 9128382394, storage: "storage1", status: "imported" },
+        { name: 'product1', lotNumber: 34646546465653, productNo: 1213124234, storage: "storage1", status: "imported", process: "SSDFER54210", PIC: "홍길똥3", place: "광양", cnt: 2423 },
+        { name: 'product2', lotNumber: 346465464656532, productNo: 2312313422, storage: "storage1", status: "imported", process: "SSDFER54210", PIC: "홍길똥234", place: "광양", cnt: 2423 },
+        { name: 'product3', lotNumber: 1253223423127348762378, productNo: 6345342423, storage: "storage1", status: "imported", process: "SSDFER54210", PIC: "홍길똥123", place: "광양", cnt: 2423 },
+        { name: 'product4', lotNumber: 346465464656534, productNo: 7234235234, storage: "storage1", status: "imported", process: "SSDFER54210", PIC: "홍길똥23423", place: "광양", cnt: 2423 },
+        { name: 'product5', lotNumber: 346465464656535, productNo: 1236234754, storage: "storage1", status: "imported", process: "SSDFER54210", PIC: "홍길똥5324", place: "광양", cnt: 2423 },
+        { name: 'product6', lotNumber: 12341234123412341234, productNo: 9128382394, storage: "storage1", status: "imported", process: "SSDFER54210", PIC: "홍길똥546666", place: "광양", cnt: 2423 },
     ]);
 
     function productDetail(no) {
@@ -21,10 +23,10 @@ function StockList() {
         <div className="">
             <div className="text-center my-20">
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    물류 요청 관리
+                    재고 관리
                 </p>
                 <p className="mt-4 text-xl text-gray-500 lg:mx-auto">
-                    입고예정, 출고예정, 이동예정인 상태인 물건들의 결재요청사항들을 확인할 수 있습니다.
+                    재고관련 조회
                 </p>
             </div>
             {/* select */}
@@ -40,7 +42,7 @@ function StockList() {
                                 id="country"
                                 name="country"
                                 autoComplete="country-name"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                             >
                                 <option>전체보기</option>
                                 <option>포항</option>
@@ -56,7 +58,7 @@ function StockList() {
                                 id="country"
                                 name="country"
                                 autoComplete="country-name"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                             >
                                 <option>전체보기</option>
                                 <option>Storage1</option>
@@ -72,7 +74,7 @@ function StockList() {
                                 id="country"
                                 name="country"
                                 autoComplete="country-name"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                             >
                                 <option>전체보기</option>
                                 <option>Product1</option>
@@ -95,7 +97,7 @@ function StockList() {
                                         id="comments"
                                         name="comments"
                                         type="checkbox"
-                                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                                     />
                                 </div>
                                 <div className="ml-3 text-sm">
@@ -111,7 +113,7 @@ function StockList() {
                                         id="candidates"
                                         name="candidates"
                                         type="checkbox"
-                                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                                     />
                                 </div>
                                 <div className="ml-3 text-sm">
@@ -127,7 +129,7 @@ function StockList() {
                                         id="offers"
                                         name="offers"
                                         type="checkbox"
-                                        className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                        className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
                                     />
                                 </div>
                                 <div className="ml-3 text-sm">
@@ -150,7 +152,7 @@ function StockList() {
                                     id="push-everything"
                                     name="push-notifications"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                                 />
                                 <label htmlFor="push-everything" className="ml-3 block text-sm font-medium text-gray-700">
                                     Everything
@@ -161,7 +163,7 @@ function StockList() {
                                     id="push-email"
                                     name="push-notifications"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                                 />
                                 <label htmlFor="push-email" className="ml-3 block text-sm font-medium text-gray-700">
                                     Same as email
@@ -172,7 +174,7 @@ function StockList() {
                                     id="push-nothing"
                                     name="push-notifications"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300"
                                 />
                                 <label htmlFor="push-nothing" className="ml-3 block text-sm font-medium text-gray-700">
                                     No push notifications
@@ -192,19 +194,19 @@ function StockList() {
                                 name="first-name"
                                 id="first-name"
                                 autoComplete="given-name"
-                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
                         </div>
                         <div>
                             <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                Product LOT
+                                Product lotNumber
                             </label>
                             <input
                                 type="text"
                                 name="first-name"
                                 id="first-name"
                                 autoComplete="given-name"
-                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
                         </div>
                         <div>
@@ -216,7 +218,7 @@ function StockList() {
                                 name="first-name"
                                 id="first-name"
                                 autoComplete="given-name"
-                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
                         </div>
                     </div>
@@ -226,7 +228,7 @@ function StockList() {
                 <div className="px-4 py-3 text-right sm:px-6">
                     <button
                         type="submit"
-                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
                     >
                         Save
                     </button>
@@ -256,6 +258,12 @@ function StockList() {
                                             >
                                                 Product No
                                             </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            >
+                                                Barcode
+                                            </th>
                                         </tr>
                                     </thead>
                                     {List ? (
@@ -273,7 +281,7 @@ function StockList() {
                                                             scope="col"
                                                             className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
                                                         >
-                                                            {data.lot}
+                                                            {data.lotNumber}
                                                         </th>
                                                         <th
                                                             scope="col"
@@ -281,6 +289,12 @@ function StockList() {
                                                             onClick={() => { productDetail(data.productNo) }}
                                                         >
                                                             {data.productNo}
+                                                        </th>
+                                                        <th
+                                                            scope="col"
+                                                            className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                        >
+                                                            <Barcode itemData={data} />
                                                         </th>
                                                     </tr>
                                                 )

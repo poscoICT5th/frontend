@@ -1,17 +1,22 @@
 import JsBarcode from 'jsbarcode'
-import React, { useState } from 'react'
-function Barcode() {
-  let barcodeInfo = {
-    "lotNumber": "34646546465653",
-    "place": "포항 공장",
-    "itemName": "STRIP_KS-SCP1S_83mm_1t",
-    "cnt": 566,
-    "process": "ST50",
-    "PIC": "홍길동"
-  }
-  function createBarcodePrint() {
+import React, { useEffect, useState } from 'react'
+function Barcode(props) {
+  // let barcodeInfo = {
+  //   "lotNumber": "34646546465653",
+  //   "place": "포항 공장",
+  //   "name": "STRIP_KS-SCP1S_83mm_1t",
+  //   "cnt": 566,
+  //   "process": "ST50",
+  //   "PIC": "홍길동"
+  // }
+  const [barcodeInfo, setbarcodeInfo] = useState({});
+  useEffect(() => {
+    setbarcodeInfo(props.itemData)
+  }, [])
+
+  function createBarcodePrint(props) {
     const canvas = document.createElement('canvas')
-    JsBarcode(canvas, barcodeInfo.lotNumber, { height: 50, displayValue: false })
+    JsBarcode(canvas, barcodeInfo.lotNumber + barcodeInfo.name, { height: 50, displayValue: false })
     let barcodeUrl = canvas.toDataURL('image/png')
     let windowObj = window.open(
       "",
@@ -46,7 +51,7 @@ function Barcode() {
                             </tr>
                             <tr>
                               <td colSpan="1">품명</td>
-                              <td colSpan="5" class="itemName">${barcodeInfo.itemName}</td>
+                              <td colSpan="5" class="name">${barcodeInfo.name}</td>
                             </tr>
                             <tr>
                               <td>수 / 중량</td>

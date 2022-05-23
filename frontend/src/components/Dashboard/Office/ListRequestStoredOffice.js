@@ -1,7 +1,7 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 
-function ListRequestTakenoutSenior() {
+function ListRequestStoredOffice() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'firstName', headerName: 'First name', width: 130 },
@@ -49,4 +49,4 @@ function ListRequestTakenoutSenior() {
   )
 }
 
-export default ListRequestTakenoutSenior
+export default ListRequestStoredOffice
