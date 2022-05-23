@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Barcode from '../../Functions/Barcode';
+import Barcode from '../Functions/Barcode';
 
 function StockList() {
     let navigate = useNavigate();

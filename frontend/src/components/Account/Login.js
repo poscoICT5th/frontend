@@ -11,7 +11,7 @@ function Login() {
   let navigate = useNavigate();
   function Login(params) {
     // 로그인 axios
-    navigate("/MainDashboardOffice");
+    navigate("/Tab");
   }
   function anzi(params) {
     // 로그인 axios

@@ -2,8 +2,8 @@ import { Tabs } from 'antd';
 import React, { useRef, useState } from 'react'
 import 'antd/dist/antd.css';
 import Login from '../../Account/Login';
-import ProductList from '../Common/ProductList';
-import StockList from '../Common/StockList';
+import ProductList from '../ProductList';
+import StockList from '../StockList';
 
 const { TabPane } = Tabs;
 const initialPanes = [

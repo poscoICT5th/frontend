@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Account/Login";
 import MainDashboardOffice from "./components/Dashboard/Office/MainDashboardOffice";
-import WarehouseList from "./components/List/Common/WarehouseList";
-import StockList from "./components/List/Common/StockList";
-import ProductList from "./components/List/Common/ProductList";
+import WarehouseList from "./components/List/WarehouseList";
+import StockList from "./components/List/StockList";
+import ProductList from "./components/List/ProductList";
 import ProductDetail from "./components/Detail/ProductDetail";
 import Map1 from "./components/Map/Map1";
 import PreparingPage from "./components/Basic/PreparingPage";
@@ -13,11 +13,17 @@ import Sidebar from "./components/Basic/Sidebar";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
 import RequestProductListOffice from "./components/List/Office/RequestProductListOffice";
+import Tab from "./components/Tab";
+import "aos/dist/aos.css";
+import Aos from "aos";
 const { Footer, Sider, Content } = Layout;
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div className="">
-      <div className="">
+      <section data-aos="fade-up" className="">
         <Layout>
           <Sider style={{ height: "100vh", background: "white" }}>
             <Sidebar />
@@ -60,6 +66,10 @@ function App() {
                   path="/MainDashboardOffice"
                   element={<MainDashboardOffice />}
                 />
+                <Route
+                  path="/Tab"
+                  element={<Tab />}
+                />
                 {/* anzi */}
                 <Route path="/map1" element={<Map1 />} />
               </Routes>
@@ -67,7 +77,7 @@ function App() {
             </Content>
           </Layout>
         </Layout>
-      </div>
+      </section>
     </div>
   );
 }

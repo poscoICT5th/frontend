@@ -20,7 +20,7 @@ function Sidebar() {
       getItem("회원탈퇴", "2"),
     ]),
     getItem("물류", "2", <UserOutlined />, [
-      getItem("입고", "RequestProductListOffice"),
+      getItem("입고", "List"),
       getItem("출고", "4"),
       getItem("이동", "5"),
     ]),
