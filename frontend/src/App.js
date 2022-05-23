@@ -12,6 +12,7 @@ import PreparingPage from "./components/Basic/PreparingPage";
 import Sidebar1 from "./components/Basic/Sidebar1";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
+import RequestProductListOffice from "./components/List/Office/RequestProductListOffice";
 const { Footer, Sider, Content } = Layout;
 function App() {
   return (
@@ -42,6 +43,10 @@ function App() {
               <Route
                 path="/MainDashboardOffice"
                 element={<MainDashboardOffice />}
+              />
+              <Route
+                path="/RequestProductListOffice"
+                element={<RequestProductListOffice />}
               />
               {/* anzi */}
               <Route path="/map1" element={<Map1 />} />

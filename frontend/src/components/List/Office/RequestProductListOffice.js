@@ -76,7 +76,7 @@ function RequestProductListOffice() {
     }
   };
   return (
-    <div>
+    <div className=''>
       <Tabs type="editable-card" onChange={onChange} activeKey={activeKey} onEdit={onEdit}>
         {panes.map((pane) => (
           <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>
