@@ -14,6 +14,7 @@ import Sidebar from "./components/Basic/Sidebar";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
 import RequestProductListOffice from "./components/List/Office/RequestProductListOffice";
+import Request from "./components/Request/Request";
 const { Footer, Sider, Content } = Layout;
 function App() {
   return (
@@ -48,6 +49,11 @@ function App() {
                   path="/RequestProductListOffice"
                   exact
                   element={<RequestProductListOffice />}
+                />
+                <Route
+                  path="/Request"
+                  exact
+                  element={<Request />}
                 />
                 {/* Junior */}
                 <Route
