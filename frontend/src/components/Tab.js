@@ -17,8 +17,8 @@ const defaultPanes = Array.from({
 });
 
 function Tab() {
-    let str = useSelector((state) => { return state })
-    console.log(str);
+    // let str = useSelector((state) => { return state })
+    // console.log(str);
     const [activeKey, setActiveKey] = useState(defaultPanes[0].key);
     const [panes, setPanes] = useState(defaultPanes);
     const newTabIndex = useRef(0);
@@ -75,7 +75,6 @@ function Tab() {
     }
     return (
         <div>
-            {str}
             <div
                 style={{
                     marginBottom: 16,
