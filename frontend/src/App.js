@@ -35,10 +35,7 @@ function App() {
                 {/* 로그인 */}
                 <Route path="/" exact element={<Login />} />
                 {/* 물품리스트 */}
-                <Route
-                  path="/LogisticsList/:title"
-                  element={<LogisticsList />}
-                />
+                <Route path="/LogisticsList/:title" element={<LogisticsList />} />
                 {/* 창고 관리 */}
                 <Route
                   path="/WarehouseList"
@@ -46,11 +43,7 @@ function App() {
                   element={<WarehouseList />}
                 />
                 {/* 재고 관리 */}
-                <Route
-                  path="/InventoryList"
-                  exact
-                  element={<InventoryList />}
-                />
+                <Route path="/InventoryList" exact element={<InventoryList />} />
                 {/* 재고 상세 + 로트번호 */}
                 <Route
                   path="/Logisticsdetail/:lot"

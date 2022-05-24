@@ -302,7 +302,6 @@ function Navbar() {
                             <Popover.Panel className="absolute top-full inset-x-0 text-sm text-gray-500 z-40 bg-white">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
-
                               <div className="relative bg-white">
                                 <div className="max-w-7xl mx-auto px-8">
                                   <div className="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
@@ -310,7 +309,6 @@ function Navbar() {
                                       {category.featured.map((item) => (
                                         <div key={item.name} className="group relative text-base sm:text-sm">
                                           <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-
                                           </div>
                                           <a href={item.href} className="mt-6 block font-medium text-gray-900">
                                             <span className="absolute z-10 inset-0" aria-hidden="true" />

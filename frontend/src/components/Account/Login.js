@@ -3,7 +3,7 @@ import "./Login.css";
 import EicEngineering from "./Videos/EicEngineering";
 import HomeCity from "./Videos/HomeCity";
 import ItService from "./Videos/ItService";
-import LogisticsBHS from "./Videos/LogisticsBHS";
+import LogisticssBHS from "./Videos/LogisticsBHS";
 import SmartFactory from "./Videos/SmartFactory";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import { useNavigate } from "react-router-dom";
@@ -35,7 +35,7 @@ function Login() {
           <SmartFactory />
         </div>
         <div>
-          <LogisticsBHS />
+          <LogisticssBHS />
         </div>
         <div>
           <ItService />
