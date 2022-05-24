@@ -25,10 +25,12 @@ function Tab() {
     const newTabIndex = useRef(0);
 
     // tab 데이터 컨트롤
-    let data = useSelector((state) => { return state })
+    let data = useSelector(state => state.tabTitle)
     useEffect(() => {
-
-    }, [])
+        if (data !== "MainDashboardOffice") {
+            add()
+        }
+    }, [data])
 
     const onChange = (key) => {
         setActiveKey(key);
@@ -38,8 +40,8 @@ function Tab() {
         setPanes([
             ...panes,
             {
-                title: data.tabTitle.payload,
-                content: data.tabTitle.payload,
+                title: data.payload,
+                content: data.payload,
                 key: newActiveKey,
             },
         ]);
@@ -82,13 +84,6 @@ function Tab() {
     }
     return (
         <div>
-            {/* <div
-                style={{
-                    marginBottom: 16,
-                }}
-            >
-        </div> */}
-            <Button onClick={add}>ADD</Button>
             <Tabs defaultActiveKey='1' hideAdd onChange={onChange} activeKey={activeKey} type="editable-card" onEdit={onEdit}>
                 {panes.map((pane) => (
                     <TabPane tab={pane.title} key={pane.key} style={{ maxWidth: "90%", margin: "auto" }}>
