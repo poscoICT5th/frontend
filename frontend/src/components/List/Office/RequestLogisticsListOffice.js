@@ -2,8 +2,8 @@ import { Tabs } from 'antd';
 import React, { useRef, useState } from 'react'
 import 'antd/dist/antd.css';
 import Login from '../../Account/Login';
-import ProductList from '../ProductList';
-import StockList from '../StockList';
+import LogisticsList from '../LogisticsList';
+import InventoryList from '../InventoryList';
 
 const { TabPane } = Tabs;
 const initialPanes = [
@@ -14,18 +14,18 @@ const initialPanes = [
   },
   {
     title: 'Tab 2',
-    content: <ProductList />,
+    content: <LogisticsList />,
     key: '2',
   },
   {
     title: 'Tab 3',
 
-    content: <StockList />,
+    content: <InventoryList />,
     key: '3',
   },
 ];
 
-function RequestProductListOffice() {
+function RequestLogisticsListOffice() {
   const { TabPane } = Tabs;
   const [activeKey, setActiveKey] = useState(initialPanes[0].key);
   const [panes, setPanes] = useState(initialPanes);
@@ -89,4 +89,4 @@ function RequestProductListOffice() {
   )
 }
 
-export default RequestProductListOffice
+export default RequestLogisticsListOffice

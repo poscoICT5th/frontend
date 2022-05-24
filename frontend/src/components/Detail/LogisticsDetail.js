@@ -2,7 +2,7 @@ import { PaperClipIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 
-function ProductDetail() {
+function LogisticsDetail() {
     // part 이름 가져오기
     let location = useLocation();
     const no = location.state.no;
@@ -16,7 +16,7 @@ function ProductDetail() {
                     <div className="border-t border-gray-200">
                         <dl>
                             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">Product name</dt>
+                                <dt className="text-sm font-medium text-gray-500">Logistics name</dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Margot Foster</dd>
                             </div>
                             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -24,11 +24,11 @@ function ProductDetail() {
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Backend Developer</dd>
                             </div>
                             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">Product Number</dt>
+                                <dt className="text-sm font-medium text-gray-500">Logistics Number</dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">margotfoster@example.com</dd>
                             </div>
                             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">Product Price</dt>
+                                <dt className="text-sm font-medium text-gray-500">Logistics Price</dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">$120,000</dd>
                             </div>
                             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -76,4 +76,4 @@ function ProductDetail() {
     )
 }
 
-export default ProductDetail
+export default LogisticsDetail

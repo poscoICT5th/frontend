@@ -20,7 +20,7 @@ const navigation = {
             { name: '현재고 조회', to: 'PreparingPage' },
             { name: 'LOT 병합, 병합해제 관리', to: 'PreparingPage' },
             { name: '창고 내 LOT 분리', to: 'PreparingPage' },
-            { name: '입고물품 창고이동 승인확인', to: 'ProductList' },
+            { name: '입고물품 창고이동 승인확인', to: 'LogisticsList' },
             { name: '기타 입, 출고 등록', to: 'PreparingPage' },
           ],
         },
@@ -28,7 +28,7 @@ const navigation = {
           id: '출고관리',
           name: '출고관리',
           items: [
-            { name: '출하요청내역', to: 'ProductList' },
+            { name: '출하요청내역', to: 'LogisticsList' },
             { name: '출하확정', to: 'PreparingPage' },
             { name: '운송비정산', to: 'PreparingPage' },
             { name: '매출마감', to: 'PreparingPage' },
@@ -40,7 +40,7 @@ const navigation = {
           id: '이송관리',
           name: '이송관리',
           items: [
-            { name: '출하요청내역', to: 'ProductList' },
+            { name: '출하요청내역', to: 'LogisticsList' },
             { name: '출하확정', to: 'PreparingPage' },
             { name: '운송비정산', to: 'PreparingPage' },
             { name: '매출마감', to: 'PreparingPage' },
@@ -59,7 +59,7 @@ const navigation = {
           id: '조회',
           name: '조회',
           items: [
-            { name: '전체조회', to: 'StockList' },
+            { name: '전체조회', to: 'InventoryList' },
             { name: 'Pants', to: 'PreparingPage' },
             { name: 'Sweaters', to: 'PreparingPage' },
             { name: 'T-Shirts', to: 'PreparingPage' },
