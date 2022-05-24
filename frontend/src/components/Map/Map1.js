@@ -18,7 +18,7 @@ function Map1() {
     return series;
   };
 
-  const tempData = [{ x: "x1", y: "y1", product: { a: 1, b: 2 } }];
+  const tempData = [{ x: "x1", y: "y1", Logistics: { a: 1, b: 2 } }];
 
   const series = [
     {

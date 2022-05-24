@@ -9,15 +9,15 @@ function Detail() {
   const part = location.state.part;
   // List 가져오기
   const [List, setList] = useState([
-    { name: 'product1', lot: 1, productNo: 1213124234, storage: "storage1", status: "imported" },
-    { name: 'product2', lot: 2, productNo: 2312313422, storage: "storage1", status: "imported" },
-    { name: 'product3', lot: 3, productNo: 6345342423, storage: "storage1", status: "imported" },
-    { name: 'product4', lot: 4, productNo: 7234235234, storage: "storage1", status: "imported" },
-    { name: 'product5', lot: 5, productNo: 1236234754, storage: "storage1", status: "imported" },
-    { name: 'product6', lot: 6, productNo: 9128382394, storage: "storage1", status: "imported" },
+    { name: 'Logistics1', lot: 1, LogisticsNo: 1213124234, storage: "storage1", status: "imported" },
+    { name: 'Logistics2', lot: 2, LogisticsNo: 2312313422, storage: "storage1", status: "imported" },
+    { name: 'Logistics3', lot: 3, LogisticsNo: 6345342423, storage: "storage1", status: "imported" },
+    { name: 'Logistics4', lot: 4, LogisticsNo: 7234235234, storage: "storage1", status: "imported" },
+    { name: 'Logistics5', lot: 5, LogisticsNo: 1236234754, storage: "storage1", status: "imported" },
+    { name: 'Logistics6', lot: 6, LogisticsNo: 9128382394, storage: "storage1", status: "imported" },
   ]);
-  function productDetail(no) {
-    navigate(`/productdetail/${no}`, { state: { no: no } })
+  function LogisticsDetail(no) {
+    navigate(`/Logisticsdetail/${no}`, { state: { no: no } })
   }
   return (
     <div>
@@ -68,7 +68,7 @@ function Detail() {
                 </div>
                 <div className="">
                   <label htmlFor="country" className="block text-sm font-medium text-gray-700">
-                    Product
+                    Logistics
                   </label>
                   <select
                     id="country"
@@ -77,9 +77,9 @@ function Detail() {
                     className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
                   >
                     <option>전체보기</option>
-                    <option>Product1</option>
-                    <option>Product2</option>
-                    <option>Product3</option>
+                    <option>Logistics1</option>
+                    <option>Logistics2</option>
+                    <option>Logistics3</option>
                   </select>
                 </div>
               </div>
@@ -187,7 +187,7 @@ function Detail() {
               <div className="grid grid-rows-4">
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                    Product Name
+                    Logistics Name
                   </label>
                   <input
                     type="text"
@@ -199,7 +199,7 @@ function Detail() {
                 </div>
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                    Product LOT
+                    Logistics LOT
                   </label>
                   <input
                     type="text"
@@ -211,7 +211,7 @@ function Detail() {
                 </div>
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                    Product Something
+                    Logistics Something
                   </label>
                   <input
                     type="text"
@@ -257,7 +257,7 @@ function Detail() {
                             scope="col"
                             className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
                           >
-                            Product No.
+                            Logistics No.
                           </th>
                           <th
                             scope="col"
@@ -286,9 +286,9 @@ function Detail() {
                               <th
                                 scope="col"
                                 className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                onClick={() => { productDetail(data.productNo) }}
+                                onClick={() => { LogisticsDetail(data.LogisticsNo) }}
                               >
-                                {data.productNo}
+                                {data.LogisticsNo}
                               </th>
                               <th
                                 scope="col"

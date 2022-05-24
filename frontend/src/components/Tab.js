@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { Component, useEffect, useRef, useState } from 'react'
 import { Button, Tabs } from 'antd';
 import MainDashboardOffice from './Dashboard/Office/MainDashboardOffice';
-import List from './List/List';
+import LogisticsList from './List/LogisticsList';
+import InventoryList from './List/InventoryList';
+import WarehouseList from './List/WarehouseList';
 import { useSelector } from 'react-redux';
+
 const { TabPane } = Tabs;
 // 맨 첫 페이지는 무조건 MainDashboard
 const defaultPanes = Array.from({
@@ -17,11 +20,12 @@ const defaultPanes = Array.from({
 });
 
 function Tab() {
-    let data = useSelector((state) => { return state })
-    console.log(data)
     const [activeKey, setActiveKey] = useState(defaultPanes[0].key);
     const [panes, setPanes] = useState(defaultPanes);
     const newTabIndex = useRef(0);
+
+    // tab 데이터 컨트롤
+    let data = useSelector((state) => { return state })
     useEffect(() => {
 
     }, [])
@@ -34,8 +38,8 @@ function Tab() {
         setPanes([
             ...panes,
             {
-                title: data.tabTitle,
-                content: <List />,
+                title: data.tabTitle.payload,
+                content: data.tabTitle.payload,
                 key: newActiveKey,
             },
         ]);
@@ -78,17 +82,36 @@ function Tab() {
     }
     return (
         <div>
-            <div
+            {/* <div
                 style={{
                     marginBottom: 16,
                 }}
             >
-                <Button onClick={add}>ADD</Button>
-            </div>
+        </div> */}
+            <Button onClick={add}>ADD</Button>
             <Tabs defaultActiveKey='1' hideAdd onChange={onChange} activeKey={activeKey} type="editable-card" onEdit={onEdit}>
                 {panes.map((pane) => (
                     <TabPane tab={pane.title} key={pane.key} style={{ maxWidth: "90%", margin: "auto" }}>
-                        {pane.content}
+                        {
+                            pane.title === "Main Dashboard"
+                                ? <MainDashboardOffice />
+                                : null
+                        }
+                        {
+                            pane.title === "LogisticsList"
+                                ? <LogisticsList />
+                                : null
+                        }
+                        {
+                            pane.title === "WarehouseList"
+                                ? <WarehouseList />
+                                : null
+                        }
+                        {
+                            pane.title === "InventoryList"
+                                ? <InventoryList />
+                                : null
+                        }
                     </TabPane>
                 ))}
             </Tabs>

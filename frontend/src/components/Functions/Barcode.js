@@ -73,7 +73,7 @@ function Barcode(props) {
   }
   return (
     <div>
-      <button type="button" onClick={createBarcodePrint}>바코드 출력</button>
+      <button type="button" onClick={createBarcodePrint}>바코드출력</button>
     </div>
   )
 }

@@ -22,7 +22,7 @@ function Request() {
             <dl>
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
-                  Product name
+                  Logistics name
                 </dt>
 
                 {/* 입력창 추가  */}
@@ -50,7 +50,7 @@ function Request() {
 
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
-                  Product Number
+                  Logistics Number
                 </dt>
                 <input
                   type="text"
@@ -62,7 +62,7 @@ function Request() {
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">
-                  Product Price
+                  Logistics Price
                 </dt>
 
                 <input
@@ -81,7 +81,7 @@ function Request() {
                   name="about"
                   rows={3}
                   className="Larger shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-                  placeholder="about product"
+                  placeholder="about Logistics"
                   defaultValue={""}
                 />
               </div>

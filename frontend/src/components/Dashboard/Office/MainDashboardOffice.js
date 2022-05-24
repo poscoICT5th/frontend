@@ -7,8 +7,8 @@ import { useSelector } from "react-redux"
 
 function MainDashboardOffice() {
     let navigate = useNavigate();
-    function toProductList(params) {
-        navigate("/RequestProductListOffice")
+    function toLogisticsList(params) {
+        navigate("/RequestLogisticsListOffice")
     }
     return (
         <div className=''>
@@ -23,7 +23,7 @@ function MainDashboardOffice() {
                     <div className='grid grid-cols-2 gap-4'>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 입고 승인대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toProductList() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toLogisticsList() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestStoredOffice />
@@ -32,7 +32,7 @@ function MainDashboardOffice() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 출고 승인대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toProductList() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toLogisticsList() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestTakenoutOffice />
@@ -41,7 +41,7 @@ function MainDashboardOffice() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 창고이동 승인대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toProductList() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toLogisticsList() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestedMoveOffice />
@@ -50,7 +50,7 @@ function MainDashboardOffice() {
                         </div>
                         <div className="mt-10">
                             <p className='text-xl text-center font-bold mb-3'>물류 창고이동 승인대기</p>
-                            <p className='text-md text-center mb-3' onClick={() => { toProductList() }}>전체보기</p>
+                            <p className='text-md text-center mb-3' onClick={() => { toLogisticsList() }}>전체보기</p>
                             <dl className="space-y-10 md:space-y-0 md:grid md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <ListRequestedMoveOffice />

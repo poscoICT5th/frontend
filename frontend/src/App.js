@@ -4,15 +4,15 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/Account/Login";
 import MainDashboardOffice from "./components/Dashboard/Office/MainDashboardOffice";
 import WarehouseList from "./components/List/WarehouseList";
-import StockList from "./components/List/StockList";
-import ProductList from "./components/List/ProductList";
-import ProductDetail from "./components/Detail/ProductDetail";
+import InventoryList from "./components/List/InventoryList";
+import LogisticsList from "./components/List/LogisticsList";
+import LogisticsDetail from "./components/Detail/LogisticsDetail";
 import Map1 from "./components/Map/Map1";
 import PreparingPage from "./components/Basic/PreparingPage";
 import Sidebar from "./components/Basic/Sidebar";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
-import RequestProductListOffice from "./components/List/Office/RequestProductListOffice";
+import RequestLogisticsListOffice from "./components/List/Office/RequestLogisticsListOffice";
 import Tab from "./components/Tab";
 import "aos/dist/aos.css";
 import Aos from "aos";
@@ -35,7 +35,7 @@ function App() {
                 {/* 로그인 */}
                 <Route path="/" exact element={<Login />} />
                 {/* 물품리스트 */}
-                <Route path="/ProductList/:title" element={<ProductList />} />
+                <Route path="/LogisticsList/:title" element={<LogisticsList />} />
                 {/* 창고 관리 */}
                 <Route
                   path="/WarehouseList"
@@ -43,12 +43,12 @@ function App() {
                   element={<WarehouseList />}
                 />
                 {/* 재고 관리 */}
-                <Route path="/StockList" exact element={<StockList />} />
+                <Route path="/InventoryList" exact element={<InventoryList />} />
                 {/* 재고 상세 + 로트번호 */}
                 <Route
-                  path="/productdetail/:lot"
+                  path="/Logisticsdetail/:lot"
                   exact
-                  element={<ProductDetail />}
+                  element={<LogisticsDetail />}
                 />
                 {/* 준비중 */}
                 <Route
@@ -58,9 +58,9 @@ function App() {
                 />
                 {/* 사무실에서 현장직으로 입고예정 처리요청 */}
                 <Route
-                  path="/RequestProductListOffice"
+                  path="/RequestLogisticsListOffice"
                   exact
-                  element={<RequestProductListOffice />}
+                  element={<RequestLogisticsListOffice />}
                 />
                 <Route path="/Request" exact element={<Request />} />
                 {/* 사무실 메인대시보드 */}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table } from 'antd';
 import Barcode from '../Functions/Barcode'
-function WarehouseList() {
+function InventoryList() {
     const columns = [
         {
             title: 'lotNumber',
@@ -81,4 +81,4 @@ function WarehouseList() {
     )
 }
 
-export default WarehouseList
+export default InventoryList

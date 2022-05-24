@@ -14,25 +14,25 @@ export let { changeName } = user.actions
 
 let tabTitle = createSlice({
   name: 'tabTitle',
-  initialState: '',
+  initialState: 'MainDashboardOffice',
   reducers: {
-    handleTabTitle(state) {
-      return state
+    handleTabTitle(state, newState) {
+      return newState
     }
   }
 })
 export let { handleTabTitle } = tabTitle.actions
 
-let tabComponent = createSlice({
-  name: 'tabComponent',
-  initialState: '',
-  reducers: {
-    handleTabComponent(state) {
-      return state
-    }
-  }
-})
-export let { handleTabComponent } = tabComponent.actions
+// let tabComponent = createSlice({
+//   name: 'tabComponent',
+//   initialState: '',
+//   reducers: {
+//     handleTabComponent(state, newState) {
+//       return "<"+newState+"/>"
+//     }
+//   }
+// })
+// export let { handleTabComponent } = tabComponent.actions
 
 // state등록해주는부분
 export default configureStore({
@@ -40,7 +40,7 @@ export default configureStore({
   reducer: {
     user: user.reducer,
     tabTitle: tabTitle.reducer,
-    tabComponent: tabComponent.reducer
+    // tabComponent: tabComponent.reducer
   }
 })
 //
