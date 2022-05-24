@@ -26,7 +26,7 @@ function Sidebar() {
         getItem("입출고 관리", "LogisticsList"),
         getItem("창고내 LOT 분리", "ManageInOut2"),
         getItem("창고이동 승인확인", "ManageInOut3"),
-        getItem("기타 입,출고 등록", "ManageInOut4"),
+        getItem("기타 입,출고 등록", "Request"),
       ]),
       getItem("이송관리", "ManageIn", <UserOutlined />, [
         getItem("이송 요청 처리", "ManageIn1"),
@@ -71,10 +71,7 @@ function Sidebar() {
           }}
           items={items11}
           onClick={(e) => {
-            console.log(e.key);
-            // navigate(`/${e.key}`);
             dispatch(handleTabTitle(e.key))
-            // dispatch(handleTabComponent(e.key))
           }}
         />
       </Sider>
