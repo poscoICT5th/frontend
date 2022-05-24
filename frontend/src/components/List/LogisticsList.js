@@ -66,7 +66,7 @@ function logisticsList() {
         },
     ];
     const data = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
         data.push({
             lotNumber: "346465653" + i * 100,
             place: "포항 공장" + i,
@@ -81,10 +81,10 @@ function logisticsList() {
             <Table
                 columns={columns}
                 dataSource={data}
-                scroll={{
-                    x: 1500,
-                    y: 300,
-                }}
+            // scroll={{
+            //     x: 1500,
+            //     y: 1000,
+            // }}
             />
         </div>
     )

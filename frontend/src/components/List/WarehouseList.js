@@ -1,6 +1,7 @@
 import React from 'react'
 import { Table } from 'antd';
 import Barcode from '../Functions/Barcode'
+import LogisticsCancel from '../Functions/LogisticsCancel';
 function WarehouseList() {
     const columns = [
         {
@@ -48,18 +49,26 @@ function WarehouseList() {
             align: 'center'
         },
         {
-            title: 'Action',
-            key: 'operation',
+            title: '바코드',
+            key: 'Barcode',
             fixed: 'right',
             width: 100,
             align: 'center',
             render: (e) => <div><Barcode itemData={e} /></div>,
         },
+        {
+            title: '요청철회',
+            key: 'Cancel',
+            fixed: 'right',
+            width: 100,
+            align: 'center',
+            render: (e) => <div><LogisticsCancel itemData={e} /></div>,
+        },
     ];
     const data = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 20; i++) {
         data.push({
-            lotNumber: "34646546465653" + i * 100,
+            lotNumber: "346465653" + i * 100,
             place: "포항 공장" + i,
             name: "STRIP_KS-SCP1S_83mm_1t",
             cnt: i + 10,
@@ -72,10 +81,10 @@ function WarehouseList() {
             <Table
                 columns={columns}
                 dataSource={data}
-                scroll={{
-                    x: 1500,
-                    y: 300,
-                }}
+            // scroll={{
+            //     x: 1500,
+            //     y: 1100,
+            // }}
             />
         </div>
     )
