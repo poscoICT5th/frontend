@@ -7,7 +7,6 @@ import WarehouseList from "./components/List/WarehouseList";
 import InventoryList from "./components/List/InventoryList";
 import LogisticsList from "./components/List/LogisticsList";
 import LogisticsDetail from "./components/Detail/LogisticsDetail";
-import RequestLogisticsListOffice from "./components/List/Office/RequestLogisticsListOffice";
 import Map1 from "./components/Map/Map1";
 import PreparingPage from "./components/Basic/PreparingPage";
 import Sidebar from "./components/Basic/Sidebar";
@@ -16,7 +15,7 @@ import { Layout } from "antd";
 import Main from "./components/Basic/Main";
 import "aos/dist/aos.css";
 import Aos from "aos";
-import Request from "./components/Request/Request";
+import RequestInOut from "./components/Request/RequestInOut";
 const { Footer, Sider, Content } = Layout;
 function App() {
   useEffect(() => {
@@ -26,7 +25,7 @@ function App() {
     <section data-aos="fade-up" className="">
       <div className="">
         <Layout>
-          <Sider style={{ height: "100vh", background: "white", width:"200px" }}>
+          <Sider style={{ height: "100vh", background: "white", width: "200px" }}>
             <Sidebar />
           </Sider>
           <Layout className="">
@@ -56,13 +55,7 @@ function App() {
                   exact
                   element={<PreparingPage />}
                 />
-                {/* 사무실에서 현장직으로 입고예정 처리요청 */}
-                {/* <Route
-                  path="/RequestLogisticsListOffice"
-                  exact
-                  element={<RequestLogisticsListOffice />}
-                /> */}
-                <Route path="/Request" exact element={<Request />} />
+                <Route path="/RequestInOut" exact element={<RequestInOut />} />
                 {/* 사무실 메인대시보드 */}
                 {/* <Route
                   path="/MainDashboardOffice"

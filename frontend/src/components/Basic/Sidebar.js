@@ -26,7 +26,7 @@ function Sidebar() {
         getItem("입출고 관리", "LogisticsList"),
         getItem("창고내 LOT 분리", "ManageInOut2"),
         getItem("창고이동 승인확인", "ManageInOut3"),
-        getItem("기타 입,출고 등록", "Request"),
+        getItem("기타 입,출고 등록", "RequestInOut"),
       ]),
       getItem("이송관리", "ManageIn", <UserOutlined />, [
         getItem("이송 요청 처리", "ManageIn1"),
@@ -41,6 +41,7 @@ function Sidebar() {
     ]),
     getItem("창고", "Warehouse", <UserOutlined />, [
       getItem("창고 조회", "WarehouseList"),
+      getItem("창고 이동 등록", "RequestMove"),
       getItem("출고", "Warehouse2"),
       getItem("이동", "Warehouse3"),
     ]),

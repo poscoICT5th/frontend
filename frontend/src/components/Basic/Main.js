@@ -5,7 +5,8 @@ import LogisticsList from '../List/LogisticsList';
 import InventoryList from '../List/InventoryList';
 import WarehouseList from '../List/WarehouseList';
 import { useSelector } from 'react-redux';
-import Request from '../Request/Request';
+import RequestInOut from '../Request/RequestInOut';
+import RequestMove from '../Request/RequestMove';
 
 const { TabPane } = Tabs;
 // 맨 첫 페이지는 무조건 MainDashboard
@@ -109,8 +110,13 @@ function Main() {
                                 : null
                         }
                         {
-                            pane.title === "Request"
-                                ? <Request />
+                            pane.title === "RequestInOut"
+                                ? <RequestInOut />
+                                : null
+                        }
+                        {
+                            pane.title === "RequestMove"
+                                ? <RequestMove />
                                 : null
                         }
                     </TabPane>
