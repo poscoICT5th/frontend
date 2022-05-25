@@ -23,8 +23,15 @@ function Sidebar() {
 
     getItem("물류", "물류", <UserOutlined />, [
       getItem("입고관리", "ManageInOut", <UserOutlined />, [
+<<<<<<< HEAD
         getItem("입고요청내역(조회)", "LogisticsList"),
         getItem("기타 입,출고 등록", "Request"),
+=======
+        getItem("입출고 관리", "LogisticsList"),
+        getItem("창고내 LOT 분리", "ManageInOut2"),
+        getItem("창고이동 승인확인", "ManageInOut3"),
+        getItem("기타 입,출고 등록", "RequestInOut"),
+>>>>>>> cho
       ]),
       getItem("출고관리", "ManageOut", <UserOutlined />, [
         getItem("출하요청내역(조회)", "ManageOut1"),
@@ -32,7 +39,13 @@ function Sidebar() {
     ]),
     getItem("창고", "Warehouse", <UserOutlined />, [
       getItem("창고 조회", "WarehouseList"),
+<<<<<<< HEAD
 
+=======
+      getItem("창고 이동 등록", "RequestMove"),
+      getItem("출고", "Warehouse2"),
+      getItem("이동", "Warehouse3"),
+>>>>>>> cho
     ]),
     getItem("재고", "Inventory", <UserOutlined />, [
       getItem("재고조회", "InventoryList"),

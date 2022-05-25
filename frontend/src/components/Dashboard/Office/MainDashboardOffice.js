@@ -1,7 +1,5 @@
 import React from 'react'
-import DashboardInventoryList from './DashboardInventoryList'
 import DashboardWaitOutList from './DashboardWaitOutList'
-import DashboardMoveList from './DashboardMoveList'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from "react-redux"
 import DashboardWaitInList from './DashboardWaitInList'
@@ -9,7 +7,6 @@ import DashboardWaitInList from './DashboardWaitInList'
 function MainDashboardOffice() {
     let navigate = useNavigate();
     function toLogisticsList(params) {
-        navigate("/RequestLogisticsListOffice")
     }
     return (
         <div className=''>
